@@ -1,1 +1,1 @@
-web: env FLASK_APP=basic/server/server.py
+web: cd basic/server && gunicorn server:app 
