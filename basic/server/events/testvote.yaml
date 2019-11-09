@@ -1,16 +1,24 @@
 pitches:
   -
     name: seeds of love
-    url: TBD
+    slides: TBD
+    members:
+      - Gigi
   -
     name: occultus ocularus
-    url: TBD
+    slides: TBD
+    members:
+      - Molly
   -
     name: typocrypha
-    url: TBD
+    slides: TBD
+    members:
+      - Tino
   - 
     name: bottom gun
-    url: TBD
+    slides: TBD
+    members:
+      - Liam
 
 voting_rounds:
   -

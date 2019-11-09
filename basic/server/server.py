@@ -3,6 +3,7 @@ import random
 import os
 import json
 import yaml
+import re
 
 class Config:
     def __init__(self, APP_SECRET_KEY, SERVER_URL, AUTH_KEY_LENGTH, AUTH_EMAILS):
@@ -76,7 +77,7 @@ def load_events(dir='events'):
 
 class Event:
     def __init__(self, name, pitches, voting_rounds):
-        self.id = gen_event_id()
+        self.id = name
         self.name = name
         self.pitches = {
             pitch.id: pitch
@@ -99,14 +100,22 @@ class Event:
 
 
 class Pitch:
-    def __init__(self, name, url=None):
+    def __init__(self, name, slides=None, members=None):
         self.name = name
-        self.url = url
-        self.id = gen_pitch_id()
-        self.dict = { 'name': name, 'url': url, 'id': self.id }
+        self.slides = slides
+        self.members = members
+        self.id = name
+        # lead = self.members[0]
+        # name, email = lead.split('(')
+        # name = name.strip()
+        # email = email.strip().strip(')')
+        # username = email.split('@')[0].strip().lower()
+        # self.id = username
+        # self.id = gen_pitch_id()
+        self.dict = { 'name': name, 'slides': slides, 'id': self.id, 'members': self.members }
 
     def __repr__(self):
-        return f"Pitch(id='{self.id}', name='{self.name}', url='{self.url}')"
+        return f"Pitch(id='{self.id}', name='{self.name}', slides='{self.slides}' members={self.members})"
 
 class VotingRound:
     def __init__(self, id, event, method=None, votes=None, slots=None):
