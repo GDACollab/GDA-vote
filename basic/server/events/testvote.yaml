@@ -1,0 +1,24 @@
+pitches:
+  -
+    name: seeds of love
+    url: TBD
+  -
+    name: occultus ocularus
+    url: TBD
+  -
+    name: typocrypha
+    url: TBD
+  - 
+    name: bottom gun
+    url: TBD
+
+voting_rounds:
+  -
+    method: rcv
+    votes: 3
+    slots: 3
+  -
+    method: rcv
+    votes: 1
+    slots: 2
+  -

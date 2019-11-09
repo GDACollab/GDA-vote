@@ -1,0 +1,5 @@
+APP_SECRET_KEY: '<your secret key here>'
+SERVER_URL: 'http://127.0.0.1:5000'
+AUTH_KEY_LENGTH: 32
+AUTH_EMAILS:
+  - ssemery@ucsc.edu
